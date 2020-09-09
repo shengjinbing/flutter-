@@ -1,7 +1,10 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'module.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -16,22 +19,37 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           new RaisedButton(
             onPressed: () {
-              var pushNamed = Navigator.pushNamed(context, '/container',arguments: "传参").then((value) => {
-                //页面关闭的时候返回的值
-                print(value)
-              });
+              var pushNamed =
+                  Navigator.pushNamed(context, '/container', arguments: "传参")
+                      .then((value) => {
+                            //页面关闭的时候返回的值
+                            print(value)
+                          });
             },
             child: Text('容器组件'),
           ),
           new RaisedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/text');
+              //Navigator.pushNamed(context, '/text');
+              Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                      transitionDuration: Duration(milliseconds: 500),
+                      pageBuilder: (context, animation, secondaryAnimation) {
+                        return new FadeTransition(
+                            opacity: animation, child: TextHomePage());
+                      }));
             },
             child: Text('文本组件'),
           ),
           new RaisedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/longlist');
+              //Navigator.pushNamed(context, '/longlist');
+              Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => ListHomePage(),
+                  ));
             },
             child: Text('长列表组件'),
           ),
@@ -111,7 +129,4 @@ class TestHomePage extends StatelessWidget {
       ),
     );
   }
-
 }
-
-

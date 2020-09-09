@@ -33,6 +33,10 @@ dependencies:
   english_words: ^3.1.0
   url_launcher: ^4.0.1
   http: ^0.12.1
+  path_provider: ^0.4.1
+  dio: 3.0.1
+  web_socket_channel: ^1.1.0
+  json_annotation: ^2.0.0
 
 
 #需要注意dependencies和dev_dependencies的区别，前者的依赖包将作为APP的源码的一部分参与编译，
@@ -40,6 +44,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: ^1.0.0
+  json_serializable: ^2.0.0
+
+
 
 
 

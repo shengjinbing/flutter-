@@ -6,6 +6,7 @@ import 'package:flutterapp/material_design.dart';
 
 import 'animation/animationPage.dart';
 import 'async/asyncPage.dart';
+import 'customView/GradientButtonRoute.dart';
 import 'functionWidgetPage.dart';
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     '/form':(BuildContext context) => FormHomePage(),
     '/appbar':(BuildContext context) => AppBarPage(),
     '/function':(BuildContext context) => InheritedWidgetTestRoute(),
-    '/provider':(BuildContext context) => ScaleAnimationRoute(),
+    '/provider':(BuildContext context) => HttpTestRoute(),
 
   };
 
