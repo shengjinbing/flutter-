@@ -4,6 +4,7 @@ import 'package:flutterapp/testHomePage.dart';
 import 'package:flutterapp/module.dart';
 import 'package:flutterapp/material_design.dart';
 
+import 'androidChannel.dart';
 import 'animation/animationPage.dart';
 import 'async/asyncPage.dart';
 import 'customView/GradientButtonRoute.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     '/longlist':(BuildContext context) => ListHomePage(),
     '/form':(BuildContext context) => FormHomePage(),
     '/appbar':(BuildContext context) => AppBarPage(),
-    '/function':(BuildContext context) => InheritedWidgetTestRoute(),
+    '/function':(BuildContext context) => AndroidChannelRoute(),
     '/provider':(BuildContext context) => HttpTestRoute(),
 
   };

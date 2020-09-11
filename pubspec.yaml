@@ -37,6 +37,7 @@ dependencies:
   dio: 3.0.1
   web_socket_channel: ^1.1.0
   json_annotation: ^2.0.0
+  webview_flutter: ^0.3.22
 
 
 #需要注意dependencies和dev_dependencies的区别，前者的依赖包将作为APP的源码的一部分参与编译，
@@ -44,6 +45,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  #只用一行命令，直接将Json文件转为Dart model类
+  #json_model: ^0.0.2
   build_runner: ^1.0.0
   json_serializable: ^2.0.0
 
