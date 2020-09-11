@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/GithubRoute.dart';
 import 'package:flutterapp/providerPage.dart';
 import 'package:flutterapp/testHomePage.dart';
 import 'package:flutterapp/module.dart';
@@ -7,11 +8,12 @@ import 'package:flutterapp/material_design.dart';
 import 'androidChannel.dart';
 import 'animation/animationPage.dart';
 import 'async/asyncPage.dart';
+import 'common/Global.dart';
 import 'customView/GradientButtonRoute.dart';
 import 'functionWidgetPage.dart';
 
-
-void main() => runApp(MyApp());
+//在此，一定要确保Global.init()方法不能抛出异常，否则 runApp(MyApp())根本执行不到。
+void main() => Global.init().then((e) => runApp(MyApp()));
 
 class MyApp extends StatelessWidget {
   Map<String, WidgetBuilder> routes = {
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
     '/appbar':(BuildContext context) => AppBarPage(),
     '/function':(BuildContext context) => AndroidChannelRoute(),
     '/provider':(BuildContext context) => HttpTestRoute(),
+    '/github':(BuildContext context) => GithubRoute(),
+
 
   };
 

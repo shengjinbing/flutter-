@@ -78,6 +78,13 @@ class HomePage extends StatelessWidget {
             },
             child: Text('provider'),
           ),
+          new RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/github');
+              //showDeleteConfirmDialog1(context);
+            },
+            child: Text('github'),
+          )
         ],
       )),
     );

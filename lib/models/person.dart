@@ -4,14 +4,13 @@ part 'person.g.dart';
 
 @JsonSerializable()
 class Person {
-  Person();
+    Person();
 
-  String name;
-  String email;
-  Person mother;
-  List<Person> friends;
-
-  factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
-
-  Map<String, dynamic> toJson() => _$PersonToJson(this);
+    String name;
+    String email;
+    Person mother;
+    List<Person> friends;
+    
+    factory Person.fromJson(Map<String,dynamic> json) => _$PersonFromJson(json);
+    Map<String, dynamic> toJson() => _$PersonToJson(this);
 }
